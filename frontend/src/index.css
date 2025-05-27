@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+
+
+@layer base {
+  :root {
+    font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Light Theme */
+    --bg: #f9fafb;
+    --text: #111827;
+    --primary: #38bdf8;
+
+    /* Dark Theme */
+    --bg-dark: #0f172a;
+    --text-dark: #f1f5f9;
+    --primary-dark: #38bdf8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[var(--bg)] text-[var(--text)] dark:bg-[var(--bg-dark)] dark:text-[var(--text-dark)];
+    @apply min-h-screen antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-bold leading-tight;
+  }
+
+  a {
+    @apply text-[var(--primary)] hover:underline;
+  }
+
+  button {
+    @apply px-4 py-2 rounded-xl font-medium transition duration-200;
+    @apply bg-[var(--primary)] text-white hover:brightness-110;
+  }
+
+  input,
+  textarea {
+    @apply px-4 py-2 rounded-md bg-white text-black dark:bg-gray-800 dark:text-white border border-gray-300 dark:border-gray-700;
+    @apply focus:outline-none focus:ring-2 focus:ring-[var(--primary)];
+  }
+}
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #4B5563;
+  border-radius: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}

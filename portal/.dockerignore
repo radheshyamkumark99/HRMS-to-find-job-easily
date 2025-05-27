@@ -1,0 +1,8 @@
+target/*.jar.original
+*.iml
+*.log
+.idea
+.git
+.gitignore
+Dockerfile
+README.md
